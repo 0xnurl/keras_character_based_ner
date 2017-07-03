@@ -37,7 +37,7 @@ class CharacterBasedLSTMModel:
         # TODO Add Viterbi decoder here, see Kuru et al.
 
         optimizer = Adam(lr=self.config.learning_rate,
-                         clipvalue=1.0)  # TODO This should be clipnorm, pending fix for https://github.com/fchollet/keras/issues/3859
+                         clipnorm=1.0)
 
         model.compile(optimizer=optimizer, loss='categorical_crossentropy',
                       metrics=['categorical_accuracy', self.non_null_label_accuracy])
