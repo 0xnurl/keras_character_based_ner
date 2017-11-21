@@ -9,7 +9,7 @@
   
 ## Usage
 
-- Implement `get_texts()` and `get_x_y()` or `get_x_y_generator()` with your own data source. 
+- Implement `get_texts()`, `get_labels()` and `get_x_y()` or `get_x_y_generator()` with your own data source. 
 
     - `x` is a tensor of shape: `(batch_size, max_length)`.
         Entries in dimension 1 are alphabet indices, index 0 is the padding symbol.
