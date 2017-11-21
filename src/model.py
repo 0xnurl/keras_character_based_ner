@@ -91,6 +91,10 @@ class CharacterBasedLSTMModel:
         self.model.evaluate_generator(test_data_generator, steps=self.dataset.num_test_docs / self.config.batch_size)
 
     def predict_str(self, s):
+        """ Get model prediction for a string
+        :param s: string to get named entities for
+        :return: a list of len(s) tuples: [(character, predicted-label for character), ...]
+        """
         x = self.dataset.str_to_x(s, self.config.sentence_max_length)
         predicted_classes = self.predict_x(x)
         chars = self.dataset.x_to_str(x)[0]
