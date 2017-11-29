@@ -14,8 +14,8 @@
     - `x` is a tensor of shape: `(batch_size, max_length)`.
         Entries in dimension 1 are alphabet indices, index 0 is the padding symbol.
         
-    - `y` is a tensor of shape: `(batch_size, number_of_labels)`.
-        Entries in dimension 1 are label indices, index 0 is the null label.
+    - `y` is a tensor of shape: `(batch_size, max_length, number_of_labels)`.
+        Entries in dimension 2 are label indices, index 0 is the null label.
 
 - Tweak the model hyper-parameters in `config.py` 
      

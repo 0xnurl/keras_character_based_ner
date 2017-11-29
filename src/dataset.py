@@ -27,7 +27,7 @@ class CharBasedNERDataset:
         :param dataset_name: 'all', 'train', 'dev' or 'test'
         :return: Tuple (x, y)
                 x: Array of shape (batch_size, sentence_maxlen). Entries in dimension 1 are alphabet indices, index 0 is the padding symbol
-                y: Array of shape (batch_size, self.num_labels). Entries in dimension 1 are label indices, index 0 is the null label
+                y: Array of shape (batch_size, sentence_maxlen, self.num_labels). Entries in dimension 2 are label indices, index 0 is the null label
         """
         raise NotImplementedError
 
