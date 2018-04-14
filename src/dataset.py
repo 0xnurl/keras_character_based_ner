@@ -9,7 +9,7 @@ class CharBasedNERDataset:
     def __init__(self):
         self.texts = self.get_texts()
         self.alphabet = CharBasedNERAlphabet(self.texts)
-        self.labels = self.BASE_LABELS + self.get_lables()
+        self.labels = self.BASE_LABELS + self.get_labels()
         self.num_labels = len(self.labels)
         self.num_to_label = {}
         self.label_to_num = {}
